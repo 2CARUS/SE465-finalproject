@@ -1,0 +1,14 @@
+{
+    "status": 202,
+    "sid":"123456789",
+    "subscriptionRequest": 
+    {
+        "uid":"23",
+        "email":"srinivas",
+        "reminder": 
+        {
+        "unit":"seconds",
+            "value":45
+        }
+    }   
+}

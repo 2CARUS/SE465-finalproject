@@ -1,6 +1,9 @@
 package com.se465.pojo;
 
-public class Vevent
+import org.codehaus.jackson.annotate.JsonIgnoreProperties;
+
+@JsonIgnoreProperties(ignoreUnknown=true)
+public class Vevents
 {
     private String summary;
 
@@ -149,6 +152,6 @@ public class Vevent
     @Override
     public String toString()
     {
-        return "ClassPojo [summary = "+summary+", sequence = "+sequence+", uid = "+uid+", x-hosts = "+x_hosts+", description = "+description+", location = "+location+", categories = "+categories+", dtend = "+dtend+", dtstart = "+dtstart+", url = "+url+", dtstamp = "+dtstamp+", status = "+status+"]";
+        return "ClassPojo [summary = "+summary+", sequence = "+sequence+", uid = "+uid+", x_hosts = "+x_hosts+", description = "+description+", location = "+location+", categories = "+categories+", dtend = "+dtend+", dtstart = "+dtstart+", url = "+url+", dtstamp = "+dtstamp+", status = "+status+"]";
     }
 }
