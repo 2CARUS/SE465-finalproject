@@ -1,36 +1,38 @@
 package com.se465.pojo;
 
+import java.util.ArrayList;
+import java.util.List;
+
+import org.codehaus.jackson.annotate.JsonIgnoreProperties;
+
+import lombok.Getter;
+import lombok.Setter;
+
+@JsonIgnoreProperties(ignoreUnknown = true)                 
 public class CalendarFeed
 {
-    private String success;
+    private Vevents[] vevents;
+    
+    @Getter
+    @Setter
+    private ArrayList<Vevents> events;
 
-    private Vcalendar[] vcalendar;
-
-    public String getSuccess ()
+    public Vevents[] getVevents ()
     {
-        return success;
+        return vevents;
     }
 
-    public void setSuccess (String success)
+    public void setVevents (Vevents[] vevents)
     {
-        this.success = success;
+        this.vevents = vevents;
     }
-
-    public Vcalendar[] getVcalendar ()
-    {
-        return vcalendar;
-    }
-
-    public void setVcalendar (Vcalendar[] vcalendar)
-    {
-        this.vcalendar = vcalendar;
-    }
-
     @Override
     public String toString()
     {
-        return "ClassPojo [success = "+success+", vcalendar = "+vcalendar+"]";
+        return "ClassPojo [ vevents = "+vevents+"]";
     }
 }
+	
+
 			
 	
