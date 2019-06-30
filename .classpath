@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="src" path="event-api/src/main/java"/>
+	<classpathentry kind="src" path="event-api/src/test/java"/>
+	<classpathentry kind="lib" path="event-api/gradle/wrapper/gradle-wrapper.jar"/>
+	<classpathentry kind="lib" path="event-api/target/gs-rest-service-0.1.0.jar"/>
+	<classpathentry kind="output" path="event-api/bin/main"/>
+</classpath>
