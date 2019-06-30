@@ -1,6 +1,7 @@
 # Compiled class file
 *.class
 
+/python-scripts/.DS_Store
 # Log file
 *.log
 
