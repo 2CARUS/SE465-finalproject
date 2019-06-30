@@ -2,6 +2,13 @@ package com.se465.subscription;
 
 import java.util.Properties;
 
+import javax.servlet.http.HttpServletResponse;
+
+import com.se465.pojo.ErrorResponse;
+import com.se465.pojo.HttpResponseObject;
+import com.se465.pojo.SubscriptionRequest;
+import com.se465.pojo.SubscriptionResponse;
+
 public class EmailHandler {
 	/**
 	* static Singleton instance.
@@ -42,8 +49,29 @@ public class EmailHandler {
 		return instance;
 	}
 
-	public void sendEmail(String greeting) {
+	public void sendEmail(String address) {
 		// TODO Auto-generated method stub
+		
+	}
+
+	public HttpResponseObject confirmationResponse(SubscriptionRequest sreq) {
+		// TODO Send Email at appropriate time
+		
+		if (this.planEmail(sreq)) {
+			return new SubscriptionResponse
+				(
+					HttpServletResponse.SC_ACCEPTED, 
+					HashIdHandler.getInstance().generateId( sreq.toString() ), 
+					sreq
+				);
+		}
+		return new ErrorResponse("Something went wrong in the email stage");
+	}
+
+	private boolean planEmail(SubscriptionRequest sreq) {
+		// TODO Auto-generated method stub
+		
+		return true;
 		
 	}
 }
