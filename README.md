@@ -10,7 +10,8 @@
 <p>Run these two commands to get a /target directory</p>
 </li>
 <li>
-<p>Once created, execute the .jar that ends with <code>-with-dependencies.jar</code></p>
+<p>Once created, execute the .jar<br>
+<code>$ java -jar /path/to/events-api/target/events-api-0.0.1-SNAPSHOT-jar-with-dependencies</code></p>
 </li>
 <li>
 <p>Navigate to <code>localhost:8080</code> and try sending GET requests to</p>
