@@ -29,7 +29,7 @@ public class EventSubscribeController extends AbstractEventController {
 			return sr; 
 		} else {
 			response.setStatus(HttpServletResponse.SC_BAD_REQUEST);
-			return this.errorResponse("400 bad JSON body");
+			return SubscriptionHandler.getInstance().badRequest();
 		}
 	}
 	
