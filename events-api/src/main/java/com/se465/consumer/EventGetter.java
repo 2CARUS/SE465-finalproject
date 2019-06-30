@@ -4,8 +4,8 @@ import java.util.List;
 
 import org.springframework.web.client.RestTemplate;
 
-import com.se465.ics.CalendarFeed;
-import com.se465.service.SchoolEvent;
+import com.se465.pojo.CalendarFeed;
+import com.se465.pojo.SchoolEvent;
 
 public class EventGetter {
 	/**
