@@ -1,4 +1,4 @@
-package com.se465.logic;
+package com.se465.data;
 
 import static org.junit.Assert.assertTrue;
 

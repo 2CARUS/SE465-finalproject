@@ -1,4 +1,4 @@
-package com.se465.logic;
+package com.se465.data;
 
 import java.io.File;
 import java.io.IOException;
@@ -6,8 +6,6 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
-import java.util.stream.Stream;
-
 import org.codehaus.jackson.JsonGenerationException;
 import org.codehaus.jackson.map.JsonMappingException;
 import org.codehaus.jackson.map.ObjectMapper;
@@ -22,6 +20,7 @@ public class DataHandler {
 	* static Singleton instance.
 	*/
 	private static volatile DataHandler instance;
+	
 	@Getter
 	private CalendarFeedResponse cFeed;
 	@Getter
@@ -77,7 +76,6 @@ public class DataHandler {
 	}
 
 
-	@SuppressWarnings("unchecked")
 	private void clean_cFeed(CalendarFeedResponse cFeed) {
 		// TODO Auto-generated method stub
 		
@@ -90,7 +88,7 @@ public class DataHandler {
 	}
 
 	public Vevents searchEvent(String uid) {
-		this.events = this.cFeed.getEvents();
+		this.events = this.getCFeed().getEvents();
 		List<Vevents> found = this.events.stream().filter(event -> event.getUid().equals(uid)).collect(Collectors.toList());
 		return found.get(0);
 	}
