@@ -68,9 +68,10 @@
 			<scope>provided</scope>
 		</dependency>
 		<dependency>
-			<groupId>com.sun.mail</groupId>
-			<artifactId>javax.mail</artifactId>
-			</dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-mail</artifactId>
+			<version>2.1.6.RELEASE</version>
+		</dependency>
 
 		<!-- https://mvnrepository.com/artifact/org.mnode.ical4j/ical4j -->
 		<dependency>
