@@ -4,7 +4,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.se465.logic.DataHandler;
+import com.se465.data.DataHandler;
 import com.se465.pojo.HttpResponseObject;
 import com.se465.pojo.SchoolEventResponse;
 import com.se465.pojo.Vevents;
@@ -25,7 +25,7 @@ public class EventSearchController extends AbstractEventController {
 				return new SchoolEventResponse((Vevents) obj);
 			} catch (Exception e) {
 
-				return this.errorResponse(e.toString(), "Please use query field of 'event?uid=<<id>>' to search for a valid uid");
+				return this.errorResponse("Please use query field of 'event?uid=<<id>>' to search for a valid uid",e.toString());
 			}
 		}
 	}

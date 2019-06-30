@@ -1,6 +1,6 @@
 package com.se465.pojo;
 
-public class GreetingResponse {
+public class GreetingResponse implements HttpResponseObject{
 
     private final long id;
     private final String content;

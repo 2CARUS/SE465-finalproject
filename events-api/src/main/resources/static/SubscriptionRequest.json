@@ -1,0 +1,9 @@
+{
+    "uid":"23",
+    "email":"srinivas",
+    "reminder": 
+    {
+       "unit":"seconds",
+        "value":45
+    }
+}

@@ -7,6 +7,8 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.se465.pojo.GreetingResponse;
+import com.se465.pojo.HttpResponseObject;
+import com.se465.subscription.EmailHandler;
 
 @RestController
 public class GreetingController {
@@ -15,7 +17,9 @@ public class GreetingController {
     private final AtomicLong counter = new AtomicLong();
 
     @RequestMapping("/greeting")
-    public GreetingResponse greeting(@RequestParam(value="name", defaultValue="World") String name) {
+    public HttpResponseObject greeting(@RequestParam(value="name", defaultValue="World") String name) {
+    	
+    	EmailHandler.getInstance().sendEmail(CONST.GREETING);
         return new GreetingResponse(counter.incrementAndGet(),
                             String.format(template, name));
     }

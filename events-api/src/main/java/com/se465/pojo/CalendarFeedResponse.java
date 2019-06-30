@@ -1,8 +1,6 @@
 package com.se465.pojo;
 
 import java.util.ArrayList;
-import java.util.List;
-
 import org.codehaus.jackson.annotate.JsonIgnoreProperties;
 
 import lombok.Getter;

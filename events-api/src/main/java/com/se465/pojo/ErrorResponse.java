@@ -9,10 +9,12 @@ public class ErrorResponse implements HttpResponseObject {
 
 	@Setter
 	@Getter
-	private String errorStackStrace;
+	private String errorCustomMessage = "none";
+	
 	@Setter
 	@Getter
-	private String errorCustomMessage = "none";
+	private String errorStackStrace;
+
 	public ErrorResponse(String e) {
 		// TODO Auto-generated constructor stub
 		this.errorStackStrace = e;

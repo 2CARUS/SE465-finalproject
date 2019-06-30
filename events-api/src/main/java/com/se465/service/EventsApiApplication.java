@@ -3,7 +3,7 @@ package com.se465.service;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-import com.se465.logic.DataHandler;
+import com.se465.data.DataHandler;
 
 @SpringBootApplication
 public class EventsApiApplication {
