@@ -3,13 +3,11 @@ package com.se465.subscription;
 import java.io.File;
 import java.io.IOException;
 
-import javax.servlet.http.HttpServletResponse;
-
 import org.codehaus.jackson.JsonGenerationException;
 import org.codehaus.jackson.map.JsonMappingException;
 import org.codehaus.jackson.map.ObjectMapper;
 
-import com.se465.pojo.CalendarFeedResponse;
+import com.se465.email.EmailHandler;
 import com.se465.pojo.HttpResponseObject;
 import com.se465.pojo.SubscriptionRequest;
 import com.se465.pojo.SubscriptionResponse;
