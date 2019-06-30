@@ -1,6 +1,6 @@
 {
     "status": 202,
-    "sid":"123456789",
+    "sid":"MD5_UNIQUE_HASH",
     "subscriptionRequest": 
     {
         "uid":"23",

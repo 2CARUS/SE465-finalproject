@@ -16,7 +16,7 @@ public class Reminder {
 	@NonNull
 	@Getter
 	@Setter
-    private String value;
+    private int value;
 	
     @Override
     public String toString()

@@ -1,4 +1,4 @@
-package com.se465.subscription;
+package com.se465.email;
 
 public interface UNIT {
 	String GREETING = "GREETINGS";
@@ -7,4 +7,5 @@ public interface UNIT {
 	String HOURS = "HOURS";
 	String DAYS = "DAYS";
 	String WEEKS = "WEEKS";
+	String MS = "MS";
 }

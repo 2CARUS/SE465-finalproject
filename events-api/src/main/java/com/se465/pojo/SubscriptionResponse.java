@@ -1,9 +1,5 @@
 package com.se465.pojo;
 
-import javax.validation.constraints.NotNull;
-
-import org.codehaus.jackson.annotate.JsonProperty;
-
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NonNull;
@@ -14,7 +10,6 @@ public class SubscriptionResponse implements HttpResponseObject {
 	
 	@Getter
 	@Setter
-	@NonNull
 	private int status;
 	
 	@Getter
