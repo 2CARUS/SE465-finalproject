@@ -9,7 +9,7 @@ import lombok.Getter;
 import lombok.Setter;
 
 @JsonIgnoreProperties(ignoreUnknown = true)                 
-public class CalendarFeed
+public class CalendarFeedResponse implements HttpResponseObject
 {
     private Vevents[] vevents;
     

@@ -5,7 +5,7 @@ import lombok.Getter;
 import lombok.Setter;
 
 @AllArgsConstructor
-public class SchoolEvent {
+public class SchoolEventResponse implements HttpResponseObject {
 	@Getter
 	@Setter
 	private Vevents event;

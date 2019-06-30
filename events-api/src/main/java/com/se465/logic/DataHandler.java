@@ -12,37 +12,37 @@ import org.codehaus.jackson.JsonGenerationException;
 import org.codehaus.jackson.map.JsonMappingException;
 import org.codehaus.jackson.map.ObjectMapper;
 
-import com.se465.pojo.CalendarFeed;
+import com.se465.pojo.CalendarFeedResponse;
 import com.se465.pojo.Vevents;
 
 import lombok.Getter;
 
-public class DataController {
+public class DataHandler {
 	/**
 	* static Singleton instance.
 	*/
-	private static volatile DataController instance;
+	private static volatile DataHandler instance;
 	@Getter
-	private CalendarFeed cFeed;
+	private CalendarFeedResponse cFeed;
 	@Getter
 	private ArrayList<Vevents> events;
 
 	/**
 	* Private constructor for singleton.
 	*/
-	private DataController() {
+	private DataHandler() {
 		this.parseData();
 	}
 
 	/**
 	* Return a singleton instance of DataInit.
 	*/
-	public static DataController getInstance() {
+	public static DataHandler getInstance() {
 		// Double lock for thread safety.
 		if (instance == null) {
-			synchronized (DataController.class) {
+			synchronized (DataHandler.class) {
 				if (instance == null) {
-					instance = new DataController();
+					instance = new DataHandler();
 				}
 			}
 		}
@@ -54,7 +54,7 @@ public class DataController {
 		try {
 
 			// Convert JSON string from file to Object
-			CalendarFeed cFeed = mapper.readValue(new File(filepath), CalendarFeed.class);
+			CalendarFeedResponse cFeed = mapper.readValue(new File(filepath), CalendarFeedResponse.class);
 
 			System.out.println(cFeed);
 			this.clean_cFeed(cFeed);
@@ -78,7 +78,7 @@ public class DataController {
 
 
 	@SuppressWarnings("unchecked")
-	private void clean_cFeed(CalendarFeed cFeed) {
+	private void clean_cFeed(CalendarFeedResponse cFeed) {
 		// TODO Auto-generated method stub
 		
 		
