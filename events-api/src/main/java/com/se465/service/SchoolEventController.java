@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.se465.consumer.EventGetter;
-import com.se465.ics.CalendarFeed;
+import com.se465.pojo.CalendarFeed;
 
 @RestController
 public class SchoolEventController {

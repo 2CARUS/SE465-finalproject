@@ -1,4 +1,4 @@
-package com.se465.service;
+package com.se465.pojo;
 
 public class SchoolEvent {
 

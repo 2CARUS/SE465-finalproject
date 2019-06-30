@@ -1,4 +1,4 @@
-package com.se465.ics;
+package com.se465.pojo;
 
 public class CalendarFeed
 {
