@@ -1,6 +1,7 @@
 # Compiled class file
 *.class
 
+/javaspikes
 /python-scripts
 # Log file
 *.log
